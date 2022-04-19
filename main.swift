@@ -12,8 +12,10 @@ var targetString = [randomVowel1, randomVowel2, randomVowel3, randomVowel4, rand
 print("The vowels you're gonna start with this time are: \(targetString).")
 func turnPlay() {
   print("It's now Turn \(turnNumber), Player \(playerNumber).")
-  print("Memorize these for this turn: \(targetString).")
-  if playerNumber == 1 {
+  if playerNumber != 1 && turnNumber != 1 {
+    print("Memorize these for this turn: \(targetString).")
+  }
+    if playerNumber == 1 {
     playerNumber += 1
   } else {
     playerNumber -= 1
@@ -31,3 +33,4 @@ if playerNumber == 1 {
   playerNumber -= 1
   }
 print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
+print("The vowels by the end were: \(targetString). Game!"
