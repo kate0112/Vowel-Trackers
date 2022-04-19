@@ -1,6 +1,15 @@
 var turnNumber = 1
 var playerNumber = 1
 var gameStillGoing = 1
+let possibleVowels = ["A", "E", "I", "O", "U", "Y"]
+let randomVowel1 = possibleVowels.randomElement()!
+let randomVowel2 = possibleVowels.randomElement()!
+let randomVowel3 = possibleVowels.randomElement()!
+let randomVowel4 = possibleVowels.randomElement()!
+let randomVowel5 = possibleVowels.randomElement()!
+let randomVowel6 = possibleVowels.randomElement()!
+var targetString = [randomVowel1, randomVowel2, randomVowel3, randomVowel4, randomVowel5, randomVowel6]
+print("The vowels you're gonna be starting with this time are: \(targetString).")
 func turnPlay() {
   print("It's now Turn \(turnNumber), Player \(playerNumber).")
   print("Memorize these for this turn: \(targetString).")
@@ -11,16 +20,6 @@ func turnPlay() {
     turnNumber += 1
   }
 }
-Data_Type Array_Name [Const_Int_Expression];
-let possibleVowels = ["A", "E", "I", "O", "U", "Y"]
-let randomVowel1 = possibleVowels.randomElement()!
-let randomVowel2 = possibleVowels.randomElement()!
-let randomVowel3 = possibleVowels.randomElement()!
-let randomVowel4 = possibleVowels.randomElement()!
-let randomVowel5 = possibleVowels.randomElement()!
-let randomVowel6 = possibleVowels.randomElement()!
-var targetString = [randomVowel1, randomVowel2, randomVowel3, randomVowel4, randomVowel5, randomVowel6]
-print("The vowels you're gonna be starting with this time are: \(targetString).")
 while gameStillGoing == 1 {
   turnPlay() 
 }
