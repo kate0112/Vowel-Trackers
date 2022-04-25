@@ -9,7 +9,6 @@ let randomVowel4 = possibleVowels.randomElement()!
 let randomVowel5 = possibleVowels.randomElement()!
 let randomVowel6 = possibleVowels.randomElement()!
 var targetString = [randomVowel1, randomVowel2, randomVowel3, randomVowel4, randomVowel5, randomVowel6]
-print(possibleVowels)
 print("The vowels you're gonna start with this time are: \(targetString).")
 func turnPlay() {
   print("It's now Turn \(turnNumber), Player \(playerNumber).")
@@ -17,8 +16,12 @@ func turnPlay() {
     print("Memorize these for this turn: \(targetString).")
   }
   readLine()
+  var input0 = readLine()
   var input1 = readLine()
   var input2 = readLine()
+  var input3 = readLine()
+  var input4 = readLine()
+  var input5 = readLine()
   gameStillGoing -= 1
   if playerNumber == 1 {
     playerNumber += 1
