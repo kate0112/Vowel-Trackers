@@ -1,4 +1,4 @@
-Vowel-Trackers
+Vowel Trackers
 This game is based on Mario Party 3's "The Beat Goes On" minigame. It is a 2-Player text-based memorization game. 
 The game starts with a set of 6 randomly selected vowels (A, E, I, O, U, Y) being shown to all players. 
 Then when P1 types 'ready', the vowels are then hidden from the player, and it transitions to their turn.
