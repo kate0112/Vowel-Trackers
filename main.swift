@@ -13,11 +13,12 @@ print("The vowels you're gonna start with this time are: \(targetString).")
 print("Each time it's your turn, memorize and type those vowels on separate lines and in capital letters.")
 func turnPlay() {
   print("It's now Turn \(turnNumber), Player \(playerNumber).")
-  if playerNumber != 1 && turnNumber != 1 {
+  if playerNumber == 2 || turnNumber > 1 {
     print("Memorize these for this turn: \(targetString).")
   }
   print("Press Enter:")
   readLine()
+  print("")
   print("")
   print("")
   print("")
