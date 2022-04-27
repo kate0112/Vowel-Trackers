@@ -98,4 +98,5 @@ if playerNumber == 1 {
     playerNumber -= 1
   }
 print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
+currentVowelAmount -= 2
 print("The \(currentVowelAmount) vowels in the target string by the end were: \(targetString).")
