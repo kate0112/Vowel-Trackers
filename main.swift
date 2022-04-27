@@ -17,7 +17,7 @@ func turnPlay() {
   if playerNumber == 2 || turnNumber > 1 {
     print("Memorize these for this turn: \(targetString).")
   }
-  print("Press Enter:")
+  print("Press Enter to begin:")
   readLine()
   print("")
   print("")
