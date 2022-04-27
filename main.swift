@@ -1,6 +1,7 @@
 var turnNumber = 1
 var playerNumber = 1
 var gameStillGoing = 1
+var currentVowelAmount = 6
 let possibleVowels = ["A", "E", "I", "O", "U", "Y"]
 let randomVowel1 = possibleVowels.randomElement()!
 let randomVowel2 = possibleVowels.randomElement()!
@@ -84,6 +85,7 @@ func turnPlay() {
     turnNumber += 1
     gameStillGoing -= 1
   }
+  currentVowelAmount += 2
 }
 while gameStillGoing == 1 {
   turnPlay()
@@ -96,4 +98,4 @@ if playerNumber == 1 {
     playerNumber -= 1
   }
 print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
-print("The vowels by the end were: \(targetString).")
+print("The \(currentVowelAmount) vowels in the target string by the end were: \(targetString).")
