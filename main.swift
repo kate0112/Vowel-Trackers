@@ -10,6 +10,7 @@ let randomVowel5 = possibleVowels.randomElement()!
 let randomVowel6 = possibleVowels.randomElement()!
 var targetString = [randomVowel1, randomVowel2, randomVowel3, randomVowel4, randomVowel5, randomVowel6]
 print("The vowels you're gonna start with this time are: \(targetString).")
+print("Type the string of vowels on seperate lines and in capital letters.")
 func turnPlay() {
   print("It's now Turn \(turnNumber), Player \(playerNumber).")
   if playerNumber != 1 && turnNumber != 1 {
