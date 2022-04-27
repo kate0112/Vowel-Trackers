@@ -22,12 +22,12 @@ func turnPlay() {
   var input3 = readLine()
   var input4 = readLine()
   var input5 = readLine()
-  gameStillGoing -= 1
   if playerNumber == 1 {
     playerNumber += 1
   } else {
     playerNumber -= 1
     turnNumber += 1
+    gameStillGoing -= 1
   }
 }
 while gameStillGoing == 1 {
