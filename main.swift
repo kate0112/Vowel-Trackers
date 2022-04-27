@@ -87,7 +87,7 @@ func turnPlay() {
   }
   currentVowelAmount += 2
 }
-while gameStillGoing == 1 {
+while gameStillGoing == 1 && turnNumber <= 10 {
   turnPlay()
 }
 print("Game! Player \(playerNumber) Wins!")
