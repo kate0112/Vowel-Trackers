@@ -16,7 +16,9 @@ func turnPlay() {
   if playerNumber != 1 && turnNumber != 1 {
     print("Memorize these for this turn: \(targetString).")
   }
+  print("Press Enter:")
   readLine()
+  prnit("Start!")
   var input0 = readLine()
   var input1 = readLine()
   var input2 = readLine()
