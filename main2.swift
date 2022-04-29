@@ -107,8 +107,8 @@ var GameVowels = [String]()
           playerNumber -= 1
       }
       print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
-      currentVowelAmount -= 1
+      numberOfVowels -= 1
      }
-      print("The \(currentVowelAmount) vowels in the target string by the end were: \(targetString).")
+      print("The \(numberOfVowels) vowels in the target string by the end were: \(GameVowels).")
 }
 turnPlay()
