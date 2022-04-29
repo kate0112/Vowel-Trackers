@@ -102,6 +102,5 @@ var GameVowels = [String]()
          print("Player \(playerNumber) Wins!")
          print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
      }
- }
- turnPlay()             
 }
+turnPlay()
