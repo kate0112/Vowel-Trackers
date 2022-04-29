@@ -1,6 +1,6 @@
 var playerNumber = 1
 var printNewLine = 60
-var turnNumber = 1     
+var turnNumber = 0
 var GameOver = 0
 var TieGame = 0
 var numberOfVowels = 0
@@ -21,7 +21,7 @@ var GameVowels = [String]()
          numberOfVowels += 1
      }
      while GameOver == 0 {
-     if playerNumber == 2 {
+     if playerNumber == 1 {
          turnNumber += 1
          }
          if playerNumber == 1 && turnNumber == 1 {
@@ -91,7 +91,7 @@ var GameVowels = [String]()
                  }
              }
          }
-         if turnNumber > 6 {
+         if turnNumber > 10 {
              GameOver = 1
              TieGame  = 1
          }
@@ -100,7 +100,15 @@ var GameVowels = [String]()
          print("Turn 10 has ended! It's a Draw!")
      } else {
          print("Player \(playerNumber) Wins!")
-         print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
+      if playerNumber == 1 {
+          playerNumber += 1
+          turnNumber -= 1
+      } else {
+          playerNumber -= 1
+      }
+      print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
+      currentVowelAmount -= 1
      }
+      print("The \(currentVowelAmount) vowels in the target string by the end were: \(targetString).")
 }
 turnPlay()
