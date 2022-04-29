@@ -99,7 +99,7 @@ var GameVowels = [String]()
      if TieGame == 1 {
          print("Turn 10 has ended! It's a Draw!")
      } else {
-         print("Player \(playerNumber) Wins!")
+         print("Game! Player \(playerNumber) Wins!")
      if playerNumber == 1 {
          playerNumber = 2
          turnNumber -= 1
