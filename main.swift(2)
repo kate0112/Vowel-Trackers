@@ -27,7 +27,9 @@ var GameVowels = [String]()
          if playerNumber == 1 && turnNumber == 1 {
          print("The vowels you're gonna start with this time are: \(GameVowels)")
          print("Each time it's your turn, memorize and type those vowels on separate lines and in capital letters.")
+         } else {
          print("Memorize these for this turn: \(GameVowels).")
+         }
          print("Press Enter to begin:")
          readLine()
          //Hide the vowel string
@@ -77,8 +79,7 @@ var GameVowels = [String]()
                          //Player guess correctly, go to next turn
                          Index += 1
                      }
-                 }
-                 else{
+                 } else{
                      GameOver = 1
                      nextTurn = 1
                      //Toggle player turn
@@ -102,6 +103,5 @@ var GameVowels = [String]()
          print("Player \(playerNumber) Wins!")
          print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
      }
- }
 }
 turnPlay()
