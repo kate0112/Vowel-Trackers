@@ -30,7 +30,7 @@ var GameVowels = [String]()
          print("Memorize these for this turn: \(GameVowels).")
          print("Press Enter to begin:")
          readLine()
-         /Hide the vowel string
+         //Hide the vowel string
          printNewLine = 60
          while printNewLine > 0 {
              print("")
