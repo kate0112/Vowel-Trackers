@@ -30,7 +30,7 @@ var GameVowels = [String]()
          } else {
          print("Memorize these for this turn: \(GameVowels).")
          }
-         print("Press Enter to begin:")
+         print("Press Enter to start:")
          readLine()
          //Hide the vowel string
          printNewLine = 60
@@ -38,7 +38,7 @@ var GameVowels = [String]()
              print("")
              printNewLine -= 1
          }
-         print("It's now Turn \(turnNumber), Player \(playerNumber).")
+         print("It's now Turn \(turnNumber), Player \(playerNumber). Start!")
          nextTurn = 0
          Index = 0
          while nextTurn == 0 {
@@ -79,7 +79,7 @@ var GameVowels = [String]()
                          //Player guess correctly, go to next turn
                          Index += 1
                      }
-                 } else{
+                 } else {
                      GameOver = 1
                      nextTurn = 1
                      //Toggle player turn
@@ -91,7 +91,6 @@ var GameVowels = [String]()
                  }
              }
          }
-         turnNumber += 1
          if turnNumber > 6 {
              GameOver = 1
              TieGame  = 1
