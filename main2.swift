@@ -9,7 +9,6 @@ var insertVowels = 0
 var vowelIndex = 0
 var Index = 0
 var validVowel = 0
-
 var possibleVowels = ["A", "E", "I", "O", "U", "Y"]
 var GameVowels = [String]()
  func turnPlay() {
@@ -102,10 +101,10 @@ var GameVowels = [String]()
      } else {
          print("Player \(playerNumber) Wins!")
      if playerNumber == 1 {
-         playerNumber += 1
+         playerNumber = 2
          turnNumber -= 1
      } else {
-         playerNumber -= 1
+         playerNumber = 1
      }
      print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
      }
