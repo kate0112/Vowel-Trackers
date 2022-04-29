@@ -28,9 +28,10 @@ var GameVowels = [String]()
          print("The vowels you're gonna start with this time are: \(GameVowels)")
          print("Each time it's your turn, memorize and type those vowels on separate lines and in capital letters.")
          } else {
+         print("It's now Turn \(turnNumber), Player \(playerNumber).")
          print("Memorize these for this turn: \(GameVowels).")
          }
-         print("Press Enter to start:")
+         print("Press Enter to begin:")
          readLine()
          //Hide the vowel string
          printNewLine = 60
@@ -38,16 +39,16 @@ var GameVowels = [String]()
              print("")
              printNewLine -= 1
          }
-         print("It's now Turn \(turnNumber), Player \(playerNumber). Start!")
+         print("Start!")
          nextTurn = 0
          Index = 0
          while nextTurn == 0 {
-             let curretVowel = GameVowels[Index]
-             if let str = readLine(){
-                 if str == curretVowel {
+             let currentVowel = GameVowels[Index]
+             if let str = readLine() {
+                 if str == currentVowel {
                      if Index == (numberOfVowels - 1) {
                          //All vowels are correct
-                         print("Good Job Player \(playerNumber)")
+                         print("Correct, Player \(playerNumber)!")
                          //Toggle player turn
                          if playerNumber == 1 {
                              playerNumber = 2
@@ -57,7 +58,7 @@ var GameVowels = [String]()
                          //Add one more vowel to the game
                          validVowel = 0
                          while validVowel == 0 {
-                             print("Enter new vowel to add to string.")
+                             print("Enter a new vowel to add to the string.")
                              if let newVowel = readLine() {
                                  vowelIndex = 0
                                  while vowelIndex < 6 {
@@ -100,15 +101,14 @@ var GameVowels = [String]()
          print("Turn 10 has ended! It's a Draw!")
      } else {
          print("Player \(playerNumber) Wins!")
-      if playerNumber == 1 {
-          playerNumber += 1
-          turnNumber -= 1
-      } else {
-          playerNumber -= 1
-      }
-      print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
-      numberOfVowels -= 1
+     if playerNumber == 1 {
+         playerNumber += 1
+         turnNumber -= 1
+     } else {
+         playerNumber -= 1
      }
-      print("The \(numberOfVowels) vowels in the target string by the end were: \(GameVowels).")
+     print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
+     }
+     print("The \(numberOfVowels) vowels in the target string by the end were: \(GameVowels).")
 }
 turnPlay()
