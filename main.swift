@@ -13,6 +13,7 @@ var possibleVowels = ["A", "E", "I", "O", "U", "Y"]
 var GameVowels = [String]()
 
 func turnPlay() {
+     
      //Let insert first 5 vowels
      while insertVowels < 5 {
          GameVowels.append(possibleVowels.randomElement()!)
