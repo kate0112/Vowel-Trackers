@@ -18,6 +18,7 @@ func turnPlay() {
      while insertVowels < 5 {
          GameVowels.append(possibleVowels.randomElement()!)
          insertVowels += 1
+          
          //Current Number of game vowels
          numberOfVowels += 1
      }
@@ -47,38 +48,44 @@ func turnPlay() {
          }
           
          print("Start!")
+          
          nextTurn = 0
          Index = 0
+          
          while nextTurn == 0 {
              let currentVowel = GameVowels[Index]
+              
              if let str = readLine() {
                  if str == currentVowel {
+                      
                      if Index == (numberOfVowels - 1) {
-                         
-                          //All vowels are correct
+                         //All vowels are correct
                          print("Correct, Player \(playerNumber)!")
                          
                           //Toggle player turn
                          if playerNumber == 1 {
                              playerNumber = 2
                          } else {
-                              
                              playerNumber = 1
                          }
                           
                          //Add one more vowel to the game
+                          
                          validVowel = 0
                          while validVowel == 0 {
                              print("Enter a new vowel to add to the string.")
                              if let newVowel = readLine() {
+                                  
                                  vowelIndex = 0
                                  while vowelIndex < 6 {
                                      if newVowel == possibleVowels[vowelIndex] {
+                                          
                                          GameVowels.append(newVowel)
                                          validVowel = 1
                                          vowelIndex = 6
                                           
                                      }
+                                      
                                      vowelIndex += 1
                                  
                                  }
@@ -90,37 +97,44 @@ func turnPlay() {
                          numberOfVowels += 1
                          nextTurn = 1
                      } else {
-                         
                           //Player guess correctly, go to next turn
+                          
                          Index += 1
                      }
-                 } else {
+                 } 
+                  else {
                      GameOver = 1
                      nextTurn = 1
+                       
                      //Toggle player turn
                      if playerNumber == 1 {
                          playerNumber = 2
-                     } else { 
+                     } 
+                     else { 
                          playerNumber = 1
                      }
                  }
              }
          }
          if turnNumber > 10 {
+              
              GameOver = 1
              TieGame  = 1
          }
      }  
      
      //While still playing
+     
      if TieGame == 1 {
          print("Turn 10 has ended! It's a Draw!")
-     } else {
+     } 
+     else {
          print("Game! Player \(playerNumber) Wins!")
      if playerNumber == 1 {
          playerNumber = 2
          turnNumber += 1
-     } else {
+     } 
+     else {
          playerNumber = 1
      }
      print("Player \(playerNumber) was eliminated on Turn \(turnNumber).")
