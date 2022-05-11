@@ -132,7 +132,6 @@ func turnPlay() {
          print("Game! Player \(playerNumber) Wins!")
      if playerNumber == 1 {
          playerNumber = 2
-         turnNumber += 1
      } 
      else {
          playerNumber = 1
